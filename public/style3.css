@@ -1,0 +1,97 @@
+/* style3.css */
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa; /* Light gray background */
+  color: #333;
+}
+
+header {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #f56040,
+    #ffdc80
+  ); /* Instagram-like gradient */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-content2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+  margin-right: 10px; /* Add spacing between the image and the title */
+}
+
+.navbar {
+  background-color: #405de6; /* Dark blue */
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #5851db; /* Slightly lighter blue on hover */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #e1306c; /* Pinkish-red */
+  margin: 10px auto;
+  padding-left: 10px;
+}
+
+.tableau-container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+form {
+  padding-left: 10px;
+}
+
+label {
+  padding-left: 25px;
+}
+
+.footer-content {
+  position: absolute; /* Absolute positioning inside the footer */
+  left: 50%;
+  transform: translateX(-50%); /* Center the content horizontally */
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Data</title>
+    <link rel="stylesheet" href="/style4.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Survey ID</th>
+                <th>Timestamp</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Relationship Status</th>
+                <th>Occupation Status</th>
+                <th>Location</th>
+                <th>N/A</th>
+                <th>Private</th>
+                <th>School</th>
+                <th>University</th>
+                <th>Company</th>
+                <th>Government</th>
+                <th>Do you use social media?</th>
+                <th>Facebook</th>
+                <th>Twitter</th>
+                <th>Instagram</th>
+                <th>YouTube</th>
+                <th>Discord</th>
+                <th>Reddit</th>
+                <th>Pinterest</th>
+                <th>TikTok</th>
+                <th>Snapchat</th>
+                <th>Q8. Average time spent on social media</th>
+                <th>Q9. Purposeless Social Media use</th>
+                <th>Q10. How often are you distracted by Social media?</th>
+                <th>Q11. Do you feel restless without social media?</th>
+                <th>Q12. How easily distracted are you?</th>
+                <th>Q13. How much are you bothered by worries?</th>
+                <th>Q14. Difficulty Concentrating</th>
+                <th>Q15. Feelings to social media comparisons</th>
+                <th>Q16. How do feel about comparisons?</th>
+                <th>Q17. Seeking validation through social media</th>
+                <th>Q18. How often do you feel depressed?</th>
+                <th>Q19. Interest flucuation</th>
+                <th>Q20. Sleep issues</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let iCount=0; iCount < mytable.length; iCount++) { %>
+                <tr>
+                    <!-- 36 data points -->
+                    <td>
+                        <%= mytable[iCount].surveyid %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].timestamp %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].age %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].gender %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].relationshipstatus %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].occupationstatus %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].location %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].na %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].private %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].school %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].university %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].company %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].government %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].usesm %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].facebook %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].twitter %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].instagram %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].youtube %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].discord %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].reddit %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].pinterest %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].tiktok %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].snapchat %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q8 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q9 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q10 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q11 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q12 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q13 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q14 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q15 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q16 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q17 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q18 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q19 %>
+                    </td>
+                    <td>
+                        <%= mytable[iCount].q20 %>
+                    </td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+
+    <div class="footer-content">
+        <a href="/">Home</a>
+        <a href="/edit">Edit login credentials</a>
+    </div>
+</body>
+
+</html>

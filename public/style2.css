@@ -1,0 +1,208 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient
+    (
+      45deg,
+      #405de6,
+      #5851db,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #fd1d1d,
+      #f56040,
+      #ffdc80
+    ); /* Instagram-like gradient */
+  /* color: #fff; */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+.question {
+  display: none;
+  padding-bottom: 10px;
+}
+
+.current {
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Apply the style to the checkbox and radio inputs */
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+  width: auto; /* Adjust the width if needed */
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox-group input,
+.checkbox-group label,
+.radio-group input,
+.radio-group label {
+  margin-right: 8px;
+}
+
+Example .checkbox-group input {
+  margin-top: 3px !important;
+}
+
+.checkbox-group {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px !important;
+}
+
+.checkbox-group label {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Add this style for the "Next" button */
+.button-next {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px; /* Adjust the font size */
+  margin-top: 16px; /* Add some top margin for spacing */
+}
+
+.button-next:hover {
+  background-color: #27ae60;
+}
+
+/* Apply the style to the existing button element */
+button.button-next {
+  width: auto; /* Remove the width: 100% to allow the button to adjust its width based on content */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#confirmationMessage {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#confirmationMessage button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#confirmationMessage button:hover {
+  background-color: #27ae60;
+}
+
+.gender-container {
+  display: flex;
+}
+
+#gender {
+  flex: 1;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+#otherGender {
+  flex: 1;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.hidden {
+  display: none;
+}
+
+.footer-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0; /* Position at the bottom of the containing element (body/html) */
+  width: 100%;
+  text-align: center;
+  padding: 10px; /* Add padding for better appearance */
+  color: #fff; /* Text color for the footer */
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  border: 1.5px solid #3498db; /* Border color around the link */
+  padding: 6px 8px; /* Padding inside the box */
+  border-radius: 4px; /* Rounded corners */
+  transition: border-color 0.3s, color 0.3s; /* Smooth transition for color and border */
+}
+
+a:hover {
+  color: #2980b9; /* Change color on hover */
+}

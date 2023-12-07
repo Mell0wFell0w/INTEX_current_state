@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Survey</title>
+
+</head>
+<body>
+
+<form id="surveyForm">
+  `  <div class="question current" id="question1">
+    <label for="location">Location:</label>
+    <select id="location" name="location" required>
+        <option value="provo">Provo</option>
+        <option value="plainsville">Plainville</option>
+      </select>
+  </div>
+  
+  
+    <div class="question" id="question2">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+  </div>
+
+
+
+  <div class="question" id="question3">
+    <label for="gender">Gender:</label>
+    <div class="gender-container">
+      <select id="gender" name="gender" onchange="handleGenderSelection();" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="text" id="otherGender" name="otherGender" placeholder="Specify" class="hidden">
+    </div>
+  </div>
+
+
+  <div class="question" id="question4">
+    <label for="relationshipStatus">Relationship Status:</label>
+    <select id="relationshipStatus" name="relationshipStatus" required>
+        <option value="">Select</option>
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+        <option value="dating">In a Relationship</option>
+        <option value="Divorced">Divorced</option>
+
+      </select>
+  </div>
+
+  <div class="question" id="question5">
+    <label for="occupationStatus">Occupation Status:</label>
+    <select id="occupationStatus" name="occupationStatus" required>
+        <option value="">Select</option>
+        <option value="universityStud">University Student</option>
+        <option value="schoolStud">School Student</option>
+        <option value="salariedWorker">Salaried Worker</option>
+        <option value="retired">Retired</option>
+    </select>
+  </div>
+
+  <div class="question" id="question6">
+    <label for="affiliatedOrganizations">What type of organizations are you affiliated with?</label>
+    <div class="checkbox-group">
+        <input type="checkbox" id="university" name="affiliatedOrganizations" value="University">
+        <label for="university">University</label>
+       <input type="checkbox" id="school" name="affiliatedOrganizations" value="School">
+        <label for="school">School</label>
+        <br>
+        <input type="checkbox" id="private" name="affiliatedOrganizations" value="Private">
+        <label for="private">Private</label>
+        <br>
+        <input type="checkbox" id="company" name="affiliatedOrganizations" value="Company">
+        <label for="company">Company</label>
+        <br>
+        <input type="checkbox" id="government" name="affiliatedOrganizations" value="Government">
+        <label for="government">Government</label>
+        <br>
+        <input type="checkbox" id="n/a" name="affiliatedOrganizations" value="N/A">
+        <label for="n/a">N/A</label>
+        </div>
+  </div>
+
+  <div class="question" id="question7">
+    <label for="useSocialMedia">Do you use social media?</label>
+    <select id="useSocialMedia" name="useSocialMedia" required>
+        <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+
+  <div class="question" id="question8">
+    <label for="socialMediaPlatforms">What social media platforms do you commonly use?</label>
+        <div class="checkbox-group">
+        <input type="checkbox" id="facebook" name="socialMediaPlatforms" value="Facebook">
+        <label for="facebook">Facebook</label>
+  
+        <input type="checkbox" id="twitter" name="socialMediaPlatforms" value="Twitter">
+        <label for="twitter">Twitter</label>
+  
+        <input type="checkbox" id="instagram" name="socialMediaPlatforms" value="Instagram">
+        <label for="instagram">Instagram</label>
+  
+        <input type="checkbox" id="youtube" name="socialMediaPlatforms" value="YouTube">
+        <label for="youtube">YouTube</label>
+  
+        <input type="checkbox" id="snapchat" name="socialMediaPlatforms" value="Snapchat">
+        <label for="snapchat">Snapchat</label>
+
+        <input type="checkbox" id="pintrest" name="socialMediaPlatforms" value="Pintrest">
+        <label for="pintrest">Pintrest</label>
+  
+        <input type="checkbox" id="discord" name="socialMediaPlatforms" value="Discord">
+        <label for="discord">Discord</label>
+  
+        <input type="checkbox" id="reddit" name="socialMediaPlatforms" value="Reddit">
+        <label for="reddit">Reddit</label>
+  
+        <input type="checkbox" id="tiktok" name="socialMediaPlatforms" value="TikTok">
+        <label for="tiktok">TikTok</label>
+        </div>
+      </div>
+
+  <div class="question" id="question9">
+    <label for="avgTimeOnSocialMedia">What is the average time you spend on social media every day?</label>
+    <select id="avgTimeOnSocialMedia" name="avgTimeOnSocialMedia" required>
+        <option value="">Select</option>
+        <option value="lessOne">Less than an Hour</option>
+        <option value="one_two">Between 1 and 2 hours</option>
+        <option value="two_three">Between 2 and 3 hours</option>
+        <option value="three_four">Between 3 and 4 hours</option>
+        <option value="four_five">Between 4 and 5 hours</option>
+        <option value="moreFive">More than 5 hours</option>
+      </select>
+  </div>
+
+  <div class="question" id="question10">
+    <label for="purposelessSocialMedia">How often do you find yourself using social media without a specific purpose?</label>
+    <div class="radio-group">
+        <input type="radio" id="purposelessSocialMedia1" name="purposelessSocialMedia" value="1" required>
+        <label for="purposelessSocialMedia1">1</label>
+  
+        <input type="radio" id="purposelessSocialMedia2" name="purposelessSocialMedia" value="2" required>
+        <label for="purposelessSocialMedia2">2</label>
+  
+        <input type="radio" id="purposelessSocialMedia3" name="purposelessSocialMedia" value="3" required>
+        <label for="purposelessSocialMedia3">3</label>
+
+        <input type="radio" id="purposelessSocialMedia4" name="purposelessSocialMedia" value="4" required>
+        <label for="purposelessSocialMedia4">4</label>
+
+        <input type="radio" id="purposelessSocialMedia5" name="purposelessSocialMedia" value="5" required>
+        <label for="purposelessSocialMedia5">5</label>
+      </div>
+    </div>
+
+  <div class="question" id="question11">
+    <label for="distractedBySocialMedia">How often do you get distracted by social media when you are busy doing something?</label>
+    <div class="radio-group">
+        <input type="radio" id="distractedBySocialMedia1" name="distractedBySocialMedia" value="1" required>
+        <label for="distractedBySocialMedia1">1</label>
+  
+        <input type="radio" id="distractedBySocialMedia2" name="distractedBySocialMedia" value="2" required>
+        <label for="distractedBySocialMedia2">2</label>
+  
+        <input type="radio" id="distractedBySocialMedia3" name="distractedBySocialMedia" value="3" required>
+        <label for="distractedBySocialMedia3">3</label>
+
+        <input type="radio" id="distractedBySocialMedia4" name="distractedBySocialMedia" value="4" required>
+        <label for="distractedBySocialMedia4">4</label>
+
+        <input type="radio" id="distractedBySocialMedia5" name="distractedBySocialMedia" value="5" required>
+        <label for="distractedBySocialMedia5">5</label>
+      </div>
+    </div>
+
+  <div class="question" id="question12">
+    <label for="restlessWithoutSocialMedia">Do you feel restless if you haven’t used social media in a while?</label>
+    <div class="radio-group">
+        <input type="radio" id="restlessWithoutSocialMedia1" name="restlessWithoutSocialMedia" value="1" required>
+        <label for="restlessWithoutSocialMedia1">1</label>
+  
+        <input type="radio" id="restlessWithoutSocialMedia2" name="restlessWithoutSocialMedia" value="2" required>
+        <label for="restlessWithoutSocialMedia2">2</label>
+  
+        <input type="radio" id="restlessWithoutSocialMedia3" name="restlessWithoutSocialMedia" value="3" required>
+        <label for="restlessWithoutSocialMedia3">3</label>
+
+        <input type="radio" id="restlessWithoutSocialMedia4" name="restlessWithoutSocialMedia" value="4" required>
+        <label for="restlessWithoutSocialMedia4">4</label>
+
+        <input type="radio" id="restlessWithoutSocialMedia5" name="restlessWithoutSocialMedia" value="5" required>
+        <label for="restlessWithoutSocialMedia5">5</label>
+      </div>
+  </div>
+
+  <div class="question" id="question13">
+    <label for="easilyDistracted">How easily distracted are you?</label>
+    <div class="radio-group">
+        <input type="radio" id="easilyDistracted1" name="easilyDistracted" value="1" required>
+        <label for="easilyDistracted1">1</label>
+  
+        <input type="radio" id="easilyDistracted2" name="easilyDistracted" value="2" required>
+        <label for="easilyDistracted2">2</label>
+  
+        <input type="radio" id="easilyDistracted3" name="easilyDistracted" value="3" required>
+        <label for="easilyDistracted3">3</label>
+
+        <input type="radio" id="easilyDistracted4" name="easilyDistracted" value="4" required>
+        <label for="easilyDistracted4">4</label>
+
+        <input type="radio" id="easilyDistracted5" name="easilyDistracted" value="5" required>
+        <label for="easilyDistracted5">5</label>
+      </div>   
+    </div>
+
+  <div class="question" id="question14">
+    <label for="botheredByWorries">How much are you bothered by worries?</label>
+    <div class="radio-group">
+        <input type="radio" id="botheredByWorries1" name="botheredByWorries" value="1" required>
+        <label for="botheredByWorries1">1</label>
+  
+        <input type="radio" id="botheredByWorries2" name="botheredByWorries" value="2" required>
+        <label for="botheredByWorries2">2</label>
+  
+        <input type="radio" id="botheredByWorries3" name="botheredByWorries" value="3" required>
+        <label for="botheredByWorries3">3</label>
+
+        <input type="radio" id="botheredByWorries4" name="botheredByWorries" value="4" required>
+        <label for="botheredByWorries4">4</label>
+
+        <input type="radio" id="botheredByWorries5" name="botheredByWorries" value="5" required>
+        <label for="botheredByWorries5">5</label>
+      </div>  
+  </div>
+
+  <div class="question" id="question15">
+    <label for="difficultyConcentrating">Do you find it difficult to concentrate on things?</label>
+    <div class="radio-group">
+        <input type="radio" id="difficultyConcentrating1" name="difficultyConcentrating" value="1" required>
+        <label for="difficultyConcentrating1">1</label>
+  
+        <input type="radio" id="difficultyConcentrating2" name="difficultyConcentrating" value="2" required>
+        <label for="difficultyConcentrating2">2</label>
+  
+        <input type="radio" id="difficultyConcentrating3" name="difficultyConcentrating" value="3" required>
+        <label for="difficultyConcentrating3">3</label>
+
+        <input type="radio" id="difficultyConcentrating4" name="difficultyConcentrating" value="4" required>
+        <label for="difficultyConcentrating4">4</label>
+
+        <input type="radio" id="difficultyConcentrating5" name="difficultyConcentrating" value="5" required>
+        <label for="difficultyConcentrating5">5</label>
+      </div>    
+     </div>
+
+  <div class="question" id="question16">
+    <label for="socialMediaComparisons">How often do you compare yourself to other successful people through the use of social media?</label>
+    <div class="radio-group">
+        <input type="radio" id="socialMediaComparisons1" name="socialMediaComparisons" value="1" required>
+        <label for="socialMediaComparisons1">1</label>
+  
+        <input type="radio" id="socialMediaComparisons2" name="socialMediaComparisons" value="2" required>
+        <label for="socialMediaComparisons2">2</label>
+  
+        <input type="radio" id="socialMediaComparisons3" name="socialMediaComparisons" value="3" required>
+        <label for="socialMediaComparisons3">3</label>
+
+        <input type="radio" id="socialMediaComparisons4" name="socialMediaComparisons" value="4" required>
+        <label for="socialMediaComparisons4">4</label>
+
+        <input type="radio" id="socialMediaComparisons5" name="socialMediaComparisons" value="5" required>
+        <label for="socialMediaComparisons5">5</label>
+      </div>  
+  </div>
+
+  <div class="question" id="question17">
+    <label for="feelingsAboutComparisons">Following the previous question, how do you feel about these comparisons, generally speaking?</label>
+    <div class="radio-group">
+        <input type="radio" id="feelingsAboutComparisons1" name="feelingsAboutComparisons" value="1" required>
+        <label for="feelingsAboutComparisons1">1</label>
+  
+        <input type="radio" id="feelingsAboutComparisons2" name="feelingsAboutComparisons" value="2" required>
+        <label for="feelingsAboutComparisons2">2</label>
+  
+        <input type="radio" id="feelingsAboutComparisons3" name="feelingsAboutComparisons" value="3" required>
+        <label for="feelingsAboutComparisons3">3</label>
+
+        <input type="radio" id="feelingsAboutComparisons4" name="feelingsAboutComparisons" value="4" required>
+        <label for="feelingsAboutComparisons4">4</label>
+
+        <input type="radio" id="feelingsAboutComparisons5" name="feelingsAboutComparisons" value="5" required>
+        <label for="feelingsAboutComparisons5">5</label>
+      </div>  
+  </div>
+
+  <div class="question" id="question18">
+    <label for="seekValidation">How often do you look to seek validation from features of social media?</label>
+    <div class="radio-group">
+        <input type="radio" id="seekValidation1" name="seekValidation" value="1" required>
+        <label for="seekValidation1">1</label>
+  
+        <input type="radio" id="seekValidation2" name="seekValidation" value="2" required>
+        <label for="seekValidation2">2</label>
+  
+        <input type="radio" id="seekValidation3" name="seekValidation" value="3" required>
+        <label for="seekValidation3">3</label>
+
+        <input type="radio" id="seekValidation4" name="seekValidation" value="4" required>
+        <label for="seekValidation4">4</label>
+
+        <input type="radio" id="seekValidation5" name="seekValidation" value="5" required>
+        <label for="seekValidation5">5</label>
+      </div>     
+    </div>
+
+  <div class="question" id="question19">
+    <label for="feelingsOfDepression">How often do you feel depressed or down?</label>
+    <div class="radio-group">
+        <input type="radio" id="feelingsOfDepression1" name="feelingsOfDepression" value="1" required>
+        <label for="feelingsOfDepression1">1</label>
+  
+        <input type="radio" id="feelingsOfDepression2" name="feelingsOfDepression" value="2" required>
+        <label for="feelingsOfDepression2">2</label>
+  
+        <input type="radio" id="feelingsOfDepression3" name="feelingsOfDepression" value="3" required>
+        <label for="feelingsOfDepression3">3</label>
+
+        <input type="radio" id="feelingsOfDepression4" name="feelingsOfDepression" value="4" required>
+        <label for="feelingsOfDepression4">4</label>
+
+        <input type="radio" id="feelingsOfDepression5" name="feelingsOfDepression" value="5" required>
+        <label for="feelingsOfDepression5">5</label>
+        <button class = "sumbit" type="submit" id="submitButton" onclick="submitSurvey()">Submit</button>
+
+      </div>  
+  </div>
+
+  <button type="button" onclick="nextQuestion()">Next</button>
+</form>
+
+<div id="confirmationMessage">
+    <p>Your response has been recorded.</p>
+    <button a href="index.html">Back to Home</button>
+  </div>
+
+<script>
+    var currentQuestion = 1;
+    var totalQuestions = 19;
+  
+    function nextQuestion() {
+      var currentQuestionElement = document.getElementById('question' + currentQuestion);
+  
+      // Perform validation (you can customize this based on your needs)
+      var input = currentQuestionElement.querySelector('input, select');
+      if (input.checkValidity()) {
+        currentQuestionElement.classList.remove('current');
+        currentQuestion++;
+  
+        // Check if it's the last question
+        if (currentQuestion === totalQuestions) {
+          // Hide the "Next" button on the last question
+          document.querySelector('button[type="button"]').style.display = 'none';
+          // Show the "Submit" button
+          document.getElementById('submitButton').style.display = 'block';
+        }
+  
+        // Show the next question if not the last one
+        if (currentQuestion <= totalQuestions) {
+          document.getElementById('question' + currentQuestion).classList.add('current');
+        }
+      } else {
+        // Show an error message or take appropriate action
+        alert('Please provide a valid answer.');
+      }
+    }
+  
+    function submitSurvey() {
+      var surveyData = {};
+  
+      for (var i = 1; i <= totalQuestions; i++) {
+        var input = document.getElementById('question' + i).querySelector('input, select');
+        surveyData[input.name] = input.value;
+      }
+  
+      // Clear the survey form
+      document.getElementById('surveyForm').reset();
+  
+      // Hide the form and show confirmation message
+      document.getElementById('surveyForm').style.display = 'none';
+      document.getElementById('confirmationMessage').style.display = 'block';
+    }
+
+    function handleGenderSelection() {
+    var selectElement = document.getElementById("gender");
+    var otherGenderInput = document.getElementById("otherGender");
+
+    if (selectElement.value === "other") {
+      otherGenderInput.classList.remove("hidden");
+      otherGenderInput.setAttribute("required", "required"); // Add required attribute if needed
+    } else {
+      otherGenderInput.classList.add("hidden");
+      otherGenderInput.removeAttribute("required");
+    }
+  }
+
+  
+  </script>  
+
+</body>
+</html>

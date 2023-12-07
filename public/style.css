@@ -1,0 +1,156 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+.question {
+  display: none;
+  padding-bottom: 10px;
+}
+
+.current {
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+width: auto; 
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox-group input,
+.checkbox-group label,
+.radio-group input,
+.radio-group label {
+  margin-right: 8px;
+}
+
+.checkbox-group, .radio-group input {
+  margin-top: 3px !important; 
+}
+.gender-container {
+  display: flex;
+}
+
+#gender {
+  flex: 1;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+#otherGender {
+  flex: 1;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.hidden {
+  display: none;
+}
+.checkbox-group, .radio-group {
+  display: flex !important;
+  flex-wrap: wrap !important; }
+
+.checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+  margin-right: 5px !important;
+}
+
+.checkbox-group label {
+  display: flex !important;
+  align-items: center !important;
+} 
+
+/* Add this style for the "Next" button */
+.button-next {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px; /* Adjust the font size */
+  margin-top: 16px; /* Add some top margin for spacing */
+}
+
+.button-next:hover {
+  background-color: #27ae60;
+}
+
+/* Apply the style to the existing button element */
+button.button-next {
+  width: auto; /* Remove the width: 100% to allow the button to adjust its width based on content */
+}
+
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#confirmationMessage {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#confirmationMessage button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#confirmationMessage button:hover {
+  background-color: #27ae60;
+}
