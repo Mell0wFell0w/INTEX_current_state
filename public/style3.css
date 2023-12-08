@@ -73,25 +73,13 @@ header {
 
 h2 {
   color: #e1306c; /* Pinkish-red */
-  margin: 10px auto;
-  padding-left: 10px;
 }
 
 .tableau-container {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;
+  justify-content: center;
   max-width: 800px;
-  margin: 20px auto;
-}
-
-form {
-  padding-left: 10px;
-}
-
-label {
-  padding-left: 25px;
-}
-
-.footer-content {
-  position: absolute; /* Absolute positioning inside the footer */
-  left: 50%;
-  transform: translateX(-50%); /* Center the content horizontally */
+  margin: 20px auto;*/
 }

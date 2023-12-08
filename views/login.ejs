@@ -12,7 +12,10 @@
     </div>
 
   <% if (error) { %>
-    <p style="color: red;"><%= error %></p>
+    <script>
+      alert("<%= error %>");
+  </script>
+    <!-- <p style="color: red; text-align: center;"><%= error %></p> -->
   <% } %>
 
   <form action="/login" method="post">
@@ -25,4 +28,9 @@
     <button type="submit">Login</button>
   </form>
 </body>
+<div class="footer-content">
+  <a href="/">Home</a>
+  <a href="/create_account">Create Account</a>
+  <a href="/survey">Fill Out Survey</a>
+</div>
 </html>

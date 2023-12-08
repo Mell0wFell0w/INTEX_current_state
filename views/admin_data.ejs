@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    <table>
+    <header>
+        <div class="header-content">
+          <h1>Survey Data</h1>
+        </div>
+        <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Search by Survey ID" onkeyup="searchTable()">
+        </div>
+    </header>
+
+    <table id="surveyTable">
         <thead>
             <tr>
                 <th>Survey ID</th>
@@ -167,6 +176,28 @@
         </tbody>
     </table>
 
+    <script>
+        function searchTable() {
+            let input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.trim(); // Trim any whitespace
+    
+            table = document.getElementById("surveyTable");
+            tr = table.getElementsByTagName("tr");
+    
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Change the index if your survey ID is in a different column
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.trim() === filter) { // Check for exact match
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
     <div class="footer-content">
         <a href="/">Home</a>
         <a href="/edit">Edit login credentials</a>
